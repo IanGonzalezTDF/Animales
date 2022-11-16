@@ -11,6 +11,18 @@ let animales:Animal[] = [arania1,gato1,pez1];
 
 let lista1:ListaDeAnimales = new ListaDeAnimales(animales);
 
-lista1.removerAnimal(gato1);
 console.log(lista1);
 //No es un trabajo completo
+
+// lista1.removerAnimal(Tigre1);//forzarError;
+function MenorSeis(pLista:ListaDeAnimales){   
+    if(this.pLista.length<6){
+        throw new Error('El arreglo de animales debe ser mayor a 6 para estar aprobado');
+    }
+}
+try{
+    MenorSeis(lista1);
+    console.log('el mensaje en try es: ');
+} catch(error){
+    console.log('El arreglo es menor a 6');
+}
